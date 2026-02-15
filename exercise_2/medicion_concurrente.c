@@ -22,10 +22,13 @@ int main() {
             if (pid3 == 0) {
                 // BISNIETO
                 for (int i = 0; i < 1000000; i++) {
+                    printf("%d\n", i);
                 }
+
             } else {
                 // NIETO
                 for (int i = 0; i < 1000000; i++) {
+                    printf("%d\n", i);
                 }
                 wait(NULL);
             }
@@ -33,6 +36,7 @@ int main() {
         } else {
             // HIJO
             for (int i = 0; i < 1000000; i++) {
+                printf("%d\n", i);
             }
             wait(NULL);
         }
@@ -43,7 +47,7 @@ int main() {
         fin = clock();
 
         double tiempo = (double)(fin - inicio);
-        printf("%f\n", tiempo);
+        printf("Tiempo (ticks CPU padre): %f\n", tiempo);
     }
 
     return 0;
